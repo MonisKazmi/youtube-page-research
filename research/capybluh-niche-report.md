@@ -38,7 +38,7 @@ Tubefilter's summary: *"a channel hosted by animated mascots who partake in huma
 | **Capybluh** | Mascot duo plus real human trends, short-form only |
 | **Oddbods** (One Animation) | Seven quirky characters with **no dialogue**, only sounds and slapstick. Shown in 180+ countries and has about 10M YouTube subscribers. Proof that sound-effect comedy travels worldwide. |
 | **Larva** (TUBAn) | Two weird bugs in **90-second, dialogue-free** episodes. Billions of views and later a Netflix deal. The original version of the "two odd creatures, slapstick, sound effects" format. |
-| **Chikn Nuggit** | Cute but strange characters with deadpan internet humor, aimed at teens and adults. Grew on TikTok and YouTube, then got merch and a TV deal. Shows that this style also works for older viewers. |
+| **Chikn Nuggit** | Cute but strange characters with deadpan internet humor, aimed at teens and adults. Grew on TikTok and YouTube into a wider franchise. Shows that this style also works for older viewers. |
 | **DaFuq!?Boom!** | 40M+ subscribers, faceless 3D, no voice acting, purely visual storytelling. Shows how far a faceless animated brand can scale. |
 
 There is also a large and fast-growing wave of AI-generated capybara and cute-animal Shorts on TikTok and YouTube, including how-to guides for making "viral AI capybara videos." That shows strong demand, but it also means the **generic version of this niche is getting crowded fast.**
@@ -52,7 +52,7 @@ There is also a large and fast-growing wave of AI-generated capybara and cute-an
 | Competition | 🟠 Rising | Lots of low-effort AI clones. Original characters with a clear personality still stand out. |
 | Barrier to entry | 🟠 Medium | Needs consistent character animation, which is the main time cost. |
 | Monetization (Shorts ads) | 🔴 Low per view | Shorts RPM is roughly **$0.05–$0.33 per 1,000 views** (the US is about $0.33 and the UK about $0.17 in AIR Media-Tech's data). The money comes from volume, long compilations, merch and licensing. |
-| Long-term value | 🟢 High | Characters are intellectual property you own. Plushies, stickers, games, licensing and Facebook and TikTok payouts are all possible. Larva, Oddbods and Chikn Nuggit all became franchises. |
+| Long-term value | 🟢 High | Characters are intellectual property you own. Plushies, stickers, games, licensing and Facebook and TikTok payouts are all possible. Larva (which later partnered with Netflix) and Oddbods grew into franchises. |
 | Policy risk | 🟠 Medium | See "Risks" below: YouTube's inauthentic-content rule, Made for Kids, and music copyright. |
 
 **Verdict:** This is a strong niche **if you build original characters with a distinct personality and a repeatable format.** It is a weak niche if you copy the capybara idea or post generic AI clips.
