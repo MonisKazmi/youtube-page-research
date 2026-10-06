@@ -1,112 +1,130 @@
 # Niche Report: Cute and Weird Animated Character Shorts (benchmark: @capybluh)
 
-*Researched October 2026. Target: a faceless YouTube channel and Facebook Page for US, UK and other Western audiences.*
+*Researched October 6, 2026, with live data from the YouTube Data API (this repo's `yt_research.py`). Target: a faceless YouTube channel and Facebook Page for US, UK and other Western audiences.*
 
-> **About the data.** I couldn't load YouTube directly from the research environment, so the channel figures below come from public trackers (Tubefilter, vidIQ, OutlierKit and Social Blade). To get exact, current numbers for Capybluh and its competitors, run this repo's tool (see the last section).
+The raw CSVs from these runs are in `output/` locally. They are git-ignored, so re-run the commands in section 11 to refresh them.
 
 ---
 
-## 1. What Capybluh is
+## 1. What Capybluh actually makes (live data)
 
 | | |
 |---|---|
-| **Format** | Vertical Shorts (short-form first) |
-| **Hosts** | Two recurring animated mascots: a blocky, Lego-like guy and his pet capybara (which gives the channel its name) |
-| **Core idea** | The mascots take part in **real human internet trends and challenges**, such as viral cooking hacks and "weird cook time" trends, without real-world consequences. They can blowtorch food for an hour or eat something disgusting and nobody gets hurt. |
-| **Scale** | About **4.13M subscribers**, **5.07B all-time views**, and **275.8M views in one week** (Sept 21–27, 2026), which put it at #50 of Tubefilter's global Top 50 most-viewed channels. Earlier tracker snapshots show about 2.5M subscribers and 2.3B views, so the channel has grown very fast this year. |
-| **Revenue (third-party estimate)** | $2.7M–$6.5M a month from ads (OutlierKit). Treat this as a rough guess; trackers often overestimate Shorts revenue. |
+| **Subscribers / views** | **4.24M subscribers, 5.3B total views, 130 videos** (channel created in 2015; the current format is recent) |
+| **Last 50 videos** | **Average 30.7M views, median 19.7M.** 49 of 50 are Shorts (one 11-minute long video, "Noob Inside the Backrooms") |
+| **Upload rate** | 50 videos in about 80 days, so **roughly one Short every 1.6 days** |
+| **Hosts** | A blocky **Roblox-style "noob" character** plus his capybara. Despite the name, the capybara is the sidekick and the noob is the main character. |
+| **Top recent videos** | "What parents see vs what i see": **202.6M**. Same title again: **130.3M**. "Drink vending process": **124.2M**. "The friend who was left alone": **66.6M**. "Mom holding an umbrella over me": **50.6M** |
 
-Tubefilter's summary: *"a channel hosted by animated mascots who partake in human challenges — without the bodily consequences."*
+### Its formats, ranked by recent results
 
-### Why it works (the formula)
+| Format | Videos (of last 50) | Median views | Example |
+|---|---|---|---|
+| **"With mom vs With dad"** (the same situation shown two ways) | 7 | **34.0M** | Same title reused 7 times |
+| **"What parents see vs what i see"** (split-screen: boring reality vs the kid's imagination) | 14 | **27.1M** | 202.6M, 130.3M, 81.5M |
+| **"How X works / is made"** (cartoon "inside the machine") | 5 | **25.4M** | Drink vending process (124M), How toast is made (41.5M), Refrigerator (23.5M), Printer (25.4M) |
+| **"X 2000 vs 2026 vs 2050"** (the past, present and future version of an everyday thing) | 4 | **15.6M** | Door, Cheetos, Cleaning, Alarm |
+| **Other relatable or emotional skits** | 20 | 11.1M | "Types of people when their battery is at 10%", "Mom holding an umbrella over me", "Cherish the people you love…" |
 
-1. **Trend-jacking with a twist.** Each video borrows a trend people already know from TikTok, Reels or Shorts, such as a cooking hack, a challenge or a meme sound. The audience already understands the premise, and the payoff is watching a cartoon take it to an impossible extreme.
-2. **Recurring mascots.** The same two characters appear every time, so viewers recognize the channel in the feed within half a second. Over time that turns into attachment ("I want to see what the capybara does next"). Capybaras were also already a cute, meme-friendly animal online.
-3. **Comedy from contrast.** A calm, deadpan pet next to a chaotic owner, and a cute art style next to absurd or gross actions. Cute plus weird is the whole brand.
-4. **Sound does the storytelling.** Exaggerated sound effects (sizzles, crunches, squeaks, boings, ASMR-style food sounds) and music cues carry the jokes. Very little or no dialogue means it works in every country and is easy to rewatch.
-5. **Built to loop.** Short running times with a hook in the first second and an ending that feeds back into the start push watch percentage above 100%, which is the strongest signal for the Shorts algorithm.
-6. **Faceless by design.** No person on camera, so it scales, can be outsourced, and doesn't depend on a host's personal brand.
+### What the data says about why it works
+
+1. **Repeatable series, not one-off ideas.** Capybluh reuses the exact same title, "What parents see vs what i see", 14 times in 50 videos, and "With mom vs With dad" 7 times. Once a format hits, it makes many versions of it. Viewers know what they'll get, and the algorithm keeps serving a proven format.
+2. **Universal, relatable situations.** Parents, siblings, school, phones, chores and food. Everyone everywhere has lived these, so videos need no explanation and almost no language.
+3. **A recognizable mascot.** The Roblox-noob look is instantly familiar to Gen Z and Gen Alpha, and the capybara adds a cute, meme-friendly sidekick.
+4. **Sound and visuals carry the jokes.** The titles are only a few words, and the comedy comes from contrast, timing and sound effects. That's why it travels across countries.
+5. **Emotional videos drive comments.** The most-commented videos are the sentimental ones: "Mom holding an umbrella over me" (**19.8K comments**), "Cherish the people you love…" (**12.4K**) and "The burden of being a provider" (**8K**). Mixing a heartfelt video in with the comedy builds attachment.
+6. **Very short running times.** Most videos are **15–30 seconds** (0.3 minutes), which makes looping easy and pushes watch percentage up.
+
+> **Correction to my first draft:** written before I had API access, it described Capybluh as a "mascots try viral cooking trends" channel, based on a Tubefilter blurb. The live data shows cooking is only a small part. The engine is **relatable comparison skits** ("vs" formats) and **"how it works" explainers**.
 
 ---
 
-## 2. Niche research: "cute and weird character comedy shorts"
+## 2. Niche research (live data, US, Shorts, last 90 days)
 
-### Proven comparable channels and IP
+This is the "Roblox-style / meme animation relatable skits" niche. I tested each Capybluh format as a search keyword to measure demand, and how open it is to small channels.
 
-| Channel / IP | What to learn from it |
-|---|---|
-| **Capybluh** | Mascot duo plus real human trends, short-form only |
-| **Oddbods** (One Animation) | Seven quirky characters with **no dialogue**, only sounds and slapstick. Shown in 180+ countries and has about 10M YouTube subscribers. Proof that sound-effect comedy travels worldwide. |
-| **Larva** (TUBAn) | Two weird bugs in **90-second, dialogue-free** episodes. Billions of views and later a Netflix deal. The original version of the "two odd creatures, slapstick, sound effects" format. |
-| **Chikn Nuggit** | Cute but strange characters with deadpan internet humor, aimed at teens and adults. Grew on TikTok and YouTube into a wider franchise. Shows that this style also works for older viewers. |
-| **DaFuq!?Boom!** | 40M+ subscribers, faceless 3D, no voice acting, purely visual storytelling. Shows how far a faceless animated brand can scale. |
+| Format / keyword | Median views per day (top 50 videos) | Small channels (<100K subs) | Big channels (>1M subs) | Breakout videos* | Read |
+|---|---|---|---|---|---|
+| "with mom vs with dad" | **393.8K** | 14% | 72% | 7/50 | Huge demand, dominated by big channels |
+| "what parents see vs what i see" | **331.9K** | 10% | 72% | 5/50 | Huge demand, dominated by big channels |
+| "noob animation" | 323.9K | 4% | 54% | 2/50 | Very crowded |
+| "how it works animation inside" | 16.0K | **78%** | 8% | **39/50** | 🟢 **Very open to newcomers** |
+| "2000 vs 2026 vs 2050" | 5.3K | 38% | 42% | 17/50 | 🟢 Open, with modest demand |
+| "capybara animation" | 1.3K | 72% | 12% | 33/50 | Low demand: the capybara itself is not the draw |
 
-There is also a large and fast-growing wave of AI-generated capybara and cute-animal Shorts on TikTok and YouTube, including how-to guides for making "viral AI capybara videos." That shows strong demand, but it also means the **generic version of this niche is getting crowded fast.**
+\*Breakout: a video with more views than its channel has subscribers, from a small channel. This is the best signal that a new channel can win.
 
-### Niche scorecard
+**Key takeaway:** the biggest formats ("parents see vs I see", "mom vs dad") have enormous demand but are mostly won by big channels. The **"how it works / inside the machine"** and **"2000 vs 2026 vs 2050"** formats are where small channels are breaking out right now. A smart launch uses the open formats to grow, then adds the big relatable formats once the channel has momentum.
+
+### Competitors (live data)
+
+| Channel | Subs | Avg views (last 30) | What they do | Lesson |
+|---|---|---|---|---|
+| **Capybluh** | 4.24M | 30.7M | Noob + capybara, "vs" skits, how-it-works | The benchmark |
+| **Hawks RBX** | 3.2M | 16.2M | Roblox animation memes ("Mom vs Dad", "How parents do gardening") | Same format, second-largest player |
+| **Robert Noob** | 3.7M | 8.0M | Roblox story edits (Animal Hospital lore) | Storylines and recurring lore work too |
+| **Keybee Animation** | 352K | 5.8M | "Types of [game] players", "That one friend…" | Gamer "types of people" humor; 71M on one video |
+| **YourNoobDude** | 324K | 5.2M | "Moms circle friends", "How parents react to your friend" | Only 54 videos, yet every one averages millions. **Quality beats quantity.** |
+| **Junivo** | 90.6K | 3.7M | Family / teacher skits ("Dad VS Emo Daughter": 27.5M) | A small channel can still land a 27M hit |
+| **Glipz** | 52.4K | 1.3M | Wholesome "dad joke" and feel-good animations | **Started March 2026**; 464M views in about 6 months |
+| **WhirrMimi** | 77.7K | 5.2M | Meme animation ("Freaky barber": 27.1M) | **Only 6 videos**; one hit built the channel |
+| **RobloxArtSchool** | 100K | 708K | "Noob vs Pro" stunts | **Started May 2026**; reached 100K in 5 months |
+| **Skit Happens 3D** | 73.6K | 806K | "Big Bro / Lil Bro" 3D skits | **Started Nov 2024**; a recurring sibling duo |
+
+Several of these channels were started in 2026 and are already pulling millions of views, so **the niche is still open to new channels with a good recurring duo and a repeatable format.**
+
+### Niche scorecard (updated)
 
 | Factor | Rating | Notes |
 |---|---|---|
-| Demand | 🟢 Very high | Cute animals, mascots and trend parodies are among the most-watched kinds of Shorts. |
-| Global / Western reach | 🟢 Excellent | Very little dialogue means no language barrier. English text overlays and US trend topics point it at Western viewers. |
-| Competition | 🟠 Rising | Lots of low-effort AI clones. Original characters with a clear personality still stand out. |
-| Barrier to entry | 🟠 Medium | Needs consistent character animation, which is the main time cost. |
-| Monetization (Shorts ads) | 🔴 Low per view | Shorts RPM is roughly **$0.05–$0.33 per 1,000 views** (the US is about $0.33 and the UK about $0.17 in AIR Media-Tech's data). The money comes from volume, long compilations, merch and licensing. |
-| Long-term value | 🟢 High | Characters are intellectual property you own. Plushies, stickers, games, licensing and Facebook and TikTok payouts are all possible. Larva (which later partnered with Netflix) and Oddbods grew into franchises. |
-| Policy risk | 🟠 Medium | See "Risks" below: YouTube's inauthentic-content rule, Made for Kids, and music copyright. |
-
-**Verdict:** This is a strong niche **if you build original characters with a distinct personality and a repeatable format.** It is a weak niche if you copy the capybara idea or post generic AI clips.
+| Demand | 🟢 Extremely high | Top formats average 300K–400K views per day per top video |
+| Western / global reach | 🟢 Excellent | Little dialogue; universal family and school situations |
+| Competition | 🔴 High in the top formats, 🟢 open in "how it works" and "2000 vs 2050" | See the table above |
+| Barrier to entry | 🟠 Medium | Needs a consistent character and quick animation. Roblox-style blocky characters are simple to rig and animate. |
+| Monetization | 🟠 | Shorts RPM is low (about $0.05–$0.33 per 1,000 views) but volume is huge. Add compilations, merch and Facebook. |
+| **Made for Kids risk** | 🔴 **High** | The Roblox look and family themes attract young viewers. See section 6. |
 
 ---
 
-## 3. Positioning your channel (don't clone; pick your own angle)
+## 3. Positioning your channel
 
-Capybluh's capybara is its brand. Using a capybara as well would put you in the shadow of a 4M-subscriber channel and among the AI copycats. Instead, build your own **mascot duo** with a clear contrast between the two characters:
+**Copy the format system, not the characters.** What works is the system: a **recurring duo + relatable "vs" situations + sound-driven comedy + repeatable series titles.** Build that around your own characters.
 
-| Concept idea | The contrast that drives the comedy |
+**Choose a look:**
+- **Roblox / blocky style** (like Capybluh, Hawks RBX and YourNoobDude). It's the fastest to animate and has proven appeal, but it's very crowded, attracts younger viewers (higher Made-for-Kids risk), and depends on another company's brand.
+- **Your own original cute-weird creatures** (recommended). Use a simple blocky or blobby design that's just as easy to animate, but which you **own**. That makes merch and licensing possible later, and it stands out from hundreds of noob channels.
+
+**Duo ideas with built-in contrast:**
+
+| Duo | Contrast |
 |---|---|
-| A tiny anxious frog + an overconfident blob chef | Panic vs. reckless confidence |
-| A sleepy axolotl + a hyperactive toaster | Chill vs. chaos |
-| A grumpy old cat + a cheerful slime | Cynic vs. optimist |
-| A raccoon "scientist" + a dumpling who's the test subject | Mad experiments, cute victim who keeps surviving |
-| A weird little creature that "lives in your fridge" | Food trends seen from inside the kitchen |
+| A lazy blob "kid" + a stressed-out mom blob | Chaos vs. responsibility (perfect for "with mom vs with dad") |
+| An anxious frog + a chill axolotl roommate | Overthinker vs. relaxed |
+| A small round creature + its giant gentle pet (your version of the capybara) | Tiny chaos vs. calm big buddy |
+| A grumpy grandpa cat + a hyper kitten | Old vs. new (perfect for "2000 vs 2026 vs 2050") |
 
-**Character design rules**
-
-- Simple silhouette that people recognize at thumbnail size. Use one or two strong colors per character.
-- Big eyes and expressive faces; weird proportions are good.
-- One signature sound per character (a squeak, honk, "bluh" or chirp). This becomes their "voice" and helps people remember the brand.
-- Optional: one recurring human-like "owner" character who is never realistic, so the channel stays faceless.
-
-**Channel name:** short, odd and easy to say, ideally built around the mascot's name (like *capy + bluh*). Check that the handle is free on YouTube, Facebook, TikTok and Instagram before you commit.
+Give each character **one signature sound** and keep their colors and silhouette the same in every video.
 
 ---
 
-## 4. Content pillars and video ideas
+## 4. Content plan: series to run (based on the data)
 
-Keep **one core format** at about 70% of uploads, and test variations with the rest.
+**Phase 1 (launch, first 1–2 months): formats that are open to newcomers**
+1. **"How X works" (cartoon inside-the-machine).** Small channels own 78% of the top videos. Topics: vending machine, toaster, claw machine, washing machine, ATM, microwave, popcorn machine, gumball machine, soda fountain, printer, escalator. Your characters live inside the machine and do the work.
+2. **"X 2000 vs 2026 vs 2050".** 38% small channels and 17 breakouts. Topics: school bus, phone, lunch box, alarm clock, McDonald's, birthday party, video games, haircut, Halloween costume.
 
-**Pillar A: Mascots try viral trends (core, ~50%)**
-Take a trending US TikTok or Reels hack or challenge and have your characters do it badly or to an absurd extreme.
-1. "Trying the viral 3-ingredient cake… but in a volcano"
-2. "Cooking a steak with only a hair dryer for 6 hours"
-3. "Testing the viral ice-cube hack" (the mascot freezes solid)
-4. "Making the biggest grilled cheese ever"
-5. The newest dance or meme trend, done by your creature with sound effects
+**Phase 2 (once you have momentum): the big relatable formats**
+3. **"With mom vs with dad"**: shopping, cooking, homework, a car ride, bedtime, a sick day.
+4. **"What parents see vs what I see"**: cleaning my room, the fridge, playing games, the playground.
+5. **"Types of people when…"**: the battery at 10%, the Wi-Fi going out, the test starts, the pizza arrives.
 
-**Pillar B: Satisfying / ASMR food (~20%)**
-Crunchy, gooey or squishy food with heavy ASMR sound design. Very rewatchable.
-6. "Eating a giant jelly cube"
-7. "Rainbow fried chicken" (squeaky crunch sound effects)
+**Always: about 1 in 5 videos emotional or wholesome.** "Mom holding an umbrella" style stories bring in the most comments and deepen attachment.
 
-**Pillar C: Duo pranks and slapstick (~15%)**
-8. The pet steals the last cookie (a chase with cartoon sound effects)
-9. "When your roommate uses your charger"-style relatable skits with no words
+**Seasonal (Western calendar):** Halloween, Thanksgiving, Christmas, New Year, the Super Bowl, back to school, summer holidays, and Bonfire Night or other UK-specific themes now and then.
 
-**Pillar D: Seasonal and Western calendar (~15%)**
-10. Halloween costume fails · 11. Thanksgiving turkey disaster · 12. Christmas cookie chaos · 13. Super Bowl snacks · 14. Bonfire Night / British food trends (beans on toast, Yorkshire pudding) for the UK · 15. Summer BBQ fails · 16. Back-to-school
+**Series discipline:** when one title works, **reuse the exact title** and make 5–10 more versions, as Capybluh does. Kill a format if it underperforms three times in a row.
 
-**Long-form (weekly):** 8–15 minute **compilations** of your Shorts ("1 hour of [Mascot] cooking chaos"). These earn much more per view than Shorts and also play on TV screens, where viewing time is growing.
+**Long-form (weekly or every two weeks):** compilations of your Shorts (8–15 minutes) and the occasional story episode, like Capybluh's "Noob Inside the Backrooms" (739K views in 3 days).
 
 ---
 
@@ -130,7 +148,7 @@ Crunchy, gooey or squishy food with heavy ASMR sound design. Very rewatchable.
 ## 6. Targeting the US, UK and Western audience
 
 - **Channel settings:** set the country to **United States** and the language to **English**. Write titles, descriptions and on-screen text in American English, and occasionally use UK references for UK-specific videos.
-- **Topics:** follow **US and UK trends** and holidays (see Pillar D) and Western food: burgers, mac and cheese, s'mores, pancakes, Greggs-style UK snacks.
+- **Topics:** Western family and school life (US school buses, lunchboxes, Thanksgiving dinner, UK school uniforms), US and UK brands and foods in "2000 vs 2050" videos, and the Western holiday calendar.
 - **Posting time:** around 12:00–15:00 and 18:00–21:00 US Eastern Time. That's the evening in the UK and midday on the US West Coast. Use YouTube Studio's "When your viewers are on YouTube" once you have data.
 - **Captions:** short, Gen Z/Millennial internet-style captions with emojis. Add English subtitles.
 - **Hashtags:** 2–3 per video, such as `#shorts #animation #[yourmascot]` plus one trend tag.
@@ -138,14 +156,14 @@ Crunchy, gooey or squishy food with heavy ASMR sound design. Very rewatchable.
 
 ### Avoiding "Made for Kids" (important)
 
-Cute cartoons can look like children's content. If YouTube or your settings classify the channel as **Made for Kids**, comments and personalized ads switch off and RPM drops sharply. **You have to label it honestly, so design the channel for a general, teen-and-adult audience from the start:** internet and meme humor, relatable adult situations (rent, jobs, roommates, gym, coffee), deadpan jokes, and no nursery themes, ABCs or toy unboxings. Chikn Nuggit is the model here. If your content genuinely is aimed at children, you must mark it Made for Kids.
+Cute cartoons can look like children's content. If YouTube or your settings classify the channel as **Made for Kids**, comments and personalized ads switch off and RPM drops sharply. **You have to label it honestly, so design the channel for a general, teen-and-adult audience from the start:** internet and meme humor, relatable adult situations (rent, jobs, roommates, gym, coffee), deadpan jokes, and no nursery themes, ABCs or toy unboxings. Chikn Nuggit is the model here. Because the top formats are about parents and childhood, tell them from a **teen or adult point of view looking back** ("me as a kid", "my parents in 2005") rather than as a show for small children. If your content genuinely is aimed at children, you must mark it Made for Kids.
 
 ---
 
 ## 7. Facebook Page strategy
 
 - Create a **Facebook Page** with the same mascot name and avatar, and post everything as **Reels**.
-- Facebook's audience is older (mostly 25–44 in the US and UK) and engages strongly with **cute animals, food and wholesome-chaotic humor**, so this content fits well.
+- Facebook's audience is older (mostly 25–44 in the US and UK) and engages strongly with **parenting, family-nostalgia ("2000 vs now") and wholesome humor**. The "with mom vs with dad" and emotional videos are a natural fit there, so this content fits well.
 - **Facebook Content Monetization** (combined program) requires roughly: **10,000+ followers**, **600,000 minutes watched in the last 60 days**, **5+ active videos**, a Page at least 90 days old, and a location in an eligible country such as the US or UK. Videos of **3 minutes or more** can earn in-stream ads, so post **compilations** there as well.
 - Use only Meta Sound Collection or licensed music on Facebook. Copyright matches there limit reach.
 - Facebook rewards original content. Reposts of other people's clips aren't monetized, so having your own characters is a real advantage.
@@ -182,7 +200,7 @@ Double down on any video that outperforms your channel average by 3× or more. M
 | Week | Actions |
 |---|---|
 | **1** | Pick the mascot duo and name, design the model sheet and signature sounds, secure the handles on YouTube, Facebook, TikTok and Instagram, set up the channel (US / English), and make the banner and avatar |
-| **2** | Build the reusable rig and kitchen set, gather the SFX and music libraries, and produce **10 Shorts** in a batch before you launch |
+| **2** | Build the reusable rigs and a few sets (home, school, "inside the machine"), gather the SFX and music libraries, and produce **10 Shorts** in a batch before you launch |
 | **3** | Post one a day on YouTube Shorts and Facebook Reels and cross-post to TikTok and Instagram. Check "viewed vs. swiped" for every video. |
 | **4** | Find your top 2–3 videos and make sequels of them. Publish your first **compilation** (8+ min). Run the `niche` research below to pick your next trend topics. |
 
@@ -190,44 +208,36 @@ Monthly after that: review the analytics, drop formats with low retention, add o
 
 ---
 
-## 11. Run the data yourself (this repo's tool)
+## 11. Re-run the data yourself
 
-With your YouTube API key in `.env` (see `README.md`):
+In this cloud session your key is already set as the `YOUTUBE_API_KEY` environment variable. On your own computer, put it in a `.env` file instead (see `README.md`). These are the exact commands behind this report:
 
 ```bash
-# Benchmark Capybluh against comparable channels
-python3 yt_research.py channel @capybluh @Oddbods @LarvaTUBA @chiknnuggit --recent 50
+# Capybluh's last 50 videos
+python3 yt_research.py channel @capybluh --recent 50
 
-# Compare sub-niches for openness to new channels (US, Shorts, last 30 days)
-python3 yt_research.py niche "capybara animation" "cute animation shorts" \
-  "animated cooking" "3d animation funny" "satisfying animation" \
-  --region US --duration short --days 30
+# Format openness, US, Shorts, last 90 days
+python3 yt_research.py niche "what parents see vs what i see" "with mom vs with dad" \
+  "2000 vs 2026 vs 2050" "how it works animation inside" "noob animation" "capybara animation" \
+  --region US --duration short --days 90 --top 8
 
-# Same for the UK
-python3 yt_research.py niche "cute animation shorts" "animated cooking" --region GB --duration short
+# Competitors (by handle)
+python3 yt_research.py channel @hawksrbx_official @thenoobroblox2512 @keybeeanimation \
+  @yournoobdude @junivolol @glipz_viral @whirrmimi @robloxartschool @skit_happens_3d --recent 30
 
-# What's trending in Film & Animation (category 1) in the US
-python3 yt_research.py trending --region US --category 1
+# Repeat for the UK
+python3 yt_research.py niche "with mom vs with dad" "how it works animation inside" --region GB --duration short
 ```
 
-Look closely at the **breakout videos**: small channels whose videos got more views than the channel has subscribers. Their titles and concepts show what a newcomer can win with right now. Upload the CSVs from `output/` to Claude and ask for 30 video ideas in the same pattern for your mascots.
-
-> Channel handles above other than `@capybluh` are best guesses; confirm them on YouTube before running.
+Upload the CSVs from `output/` to Claude to get 30+ title ideas modeled on the breakout videos.
 
 ---
 
 ## Sources
 
+- Live data: YouTube Data API v3, pulled October 6, 2026, using `yt_research.py`
 - [Tubefilter: Top 50 Most Viewed YouTube Channels, week of 09/27/2026](https://www.tubefilter.com/2026/09/28/top-50-most-viewed-youtube-channels-week-of-09-27-2026/)
-- [OutlierKit: Capybluh channel analysis](https://outlierkit.com/channel/capybluh)
-- [Social Blade: Capybluh](https://socialblade.com/youtube/handle/capybluh/videos)
-- [Wikipedia: Oddbods](https://en.wikipedia.org/wiki/Oddbods) · [Google blog: Oddbods](https://blog.google/topics/google-asia/oddbods)
-- [Hancinema: Larva producers on their success](https://c.hancinema.net/larva-animation-producers-talk-about-success-secret-55314.html)
-- [Wikipedia: Chikn Nuggit](https://en.wikipedia.org/wiki/Chikn_Nuggit)
-- [vidIQ: Faceless YouTube channel ideas](https://vidiq.com/blog/post/youtube-channel-ideas-without-showing-your-face/)
-- [Filmora: How to make a viral AI capybara video](https://filmora.wondershare.com/trending-topic/ai-capybara-video.html)
+- [Wikipedia: Oddbods](https://en.wikipedia.org/wiki/Oddbods) · [Hancinema: Larva](https://c.hancinema.net/larva-animation-producers-talk-about-success-secret-55314.html) · [Wikipedia: Chikn Nuggit](https://en.wikipedia.org/wiki/Chikn_Nuggit) (dialogue-free and cute-weird character IP)
 - [AIR Media-Tech: Shorts RPM vs long-form (274 channels)](https://air.io/en/air-data-findings/youtube-shorts-rpm-vs-long-form-how-much-do-shorts-earn-in-2026)
 - [eWeek: YouTube on AI and authentic content](https://www.eweek.com/news/youtube-responds-to-ai-concerns/)
-- [Buffer: How to make money on Facebook](https://www.buffer.com/resources/how-to-make-money-on-facebook/)
-- [ShortSync: Facebook Content Monetization guide](https://www.shortsync.app/resources/facebook-content-monetization-program-2026)
-- [GarageFarm: Animation trends 2026](https://garagefarm.net/blog/animation-trends-to-watch)
+- [Buffer: How to make money on Facebook](https://www.buffer.com/resources/how-to-make-money-on-facebook/) · [ShortSync: Facebook Content Monetization guide](https://www.shortsync.app/resources/facebook-content-monetization-program-2026)
