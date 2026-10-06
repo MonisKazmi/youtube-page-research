@@ -71,6 +71,8 @@ the share of recent uploads that are Shorts, and their best recent videos.
 
 ## 3. Analyze the results with Claude
 
+See `research/capybluh-niche-report.md` for a worked example: a niche report on cute and weird animated character Shorts.
+
 Every run saves CSV files in `output/`. Upload them to Claude and ask things like:
 
 - *"Here's my niche summary. Rank these niches for a beginner who can post 2
